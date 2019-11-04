@@ -42,7 +42,12 @@ class MenuSelect extends React.Component<any, any> {
     }
     public removeOption(event: any, id:any) : void {
         event.preventDefault();
-        this.setState({list: this.state.list.splice(id,1)});
+        let arr = this.state.list;
+        if (id > -1) {
+            arr.splice(id,1);
+        }
+        this.setState({list: arr});
+
     }
     render() {
         return (
