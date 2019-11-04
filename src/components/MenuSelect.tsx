@@ -27,7 +27,7 @@ class MenuSelect extends React.Component<any, any> {
             selectable: true,
         });
     }
-    public submitItem(event:any) : void {
+    public submitItem(event: any) : void {
         event.preventDefault();
         const arr = this.state.list;
         arr.push(this.state.placeholder);
@@ -38,16 +38,15 @@ class MenuSelect extends React.Component<any, any> {
         });
     }
     public closeMenu() : void {
-        this.setState({ showMenu:true })
+        this.setState({ showMenu: true })
     }
-    public removeOption(event: any, id:any) : void {
+    public removeOption(event: any, id: any) : void {
         event.preventDefault();
         let arr = this.state.list;
         if (id > -1) {
             arr.splice(id,1);
         }
         this.setState({list: arr});
-
     }
     render() {
         return (
@@ -57,7 +56,7 @@ class MenuSelect extends React.Component<any, any> {
                     value={ this.state.selectable }
                     options={ this.state.store }
                     placeholder={ this.state.placeholder }
-                    onMenuClose={ this.closeMenu}
+                    onMenuClose={ this.closeMenu }
                 />
                 <button onClick={ event => this.submitItem(event) } disabled={ (!this.state.selectable) }>Add to List</button>
                 <ul>
