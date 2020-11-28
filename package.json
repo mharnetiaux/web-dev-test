@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
+    "extract": "formatjs extract 'src/**/*.ts*' --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
     "start": "webpack serve"
   },
   "repository": {
+    "extract": "formatjs extract",
     "type": "git",
     "url": "git+https://github.com/mharnetiaux/web-dev-test.git"
   },
@@ -17,6 +19,7 @@
     "@types/react-select": "^3.0.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-intl": "^5.10.6",
     "react-select": "^3.0.8"
   },
   "keywords": [
@@ -35,6 +38,7 @@
     "@babel/preset-react": "^7.12.7",
     "@babel/preset-typescript": "^7.6.0",
     "@babel/register": "^7.0.0",
+    "@formatjs/cli": "^2.13.15",
     "babel-loader": "^8.2.2",
     "babel-minify-webpack-plugin": "^0.3.1",
     "css-loader": "^3.2.0",

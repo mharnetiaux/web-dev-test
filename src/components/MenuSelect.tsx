@@ -49,8 +49,9 @@ class MenuSelect extends React.Component<any, any> {
     }
     render() {
         return (
-            <main>
+            <section>
                 <Select
+                    className={'select-menu'}
                     onChange={ this.handleChange }
                     value={ this.state.selectable }
                     options={ this.state.store }
@@ -61,7 +62,7 @@ class MenuSelect extends React.Component<any, any> {
                 <ul>
                     { this.state.list.map((item, id) => <li key={ id }>{ item }<button className='delete' onClick={ event => this.removeOption(event,id) }>X</button></li>) }
                 </ul>
-            </main>
+            </section>
         );
     };
 }
