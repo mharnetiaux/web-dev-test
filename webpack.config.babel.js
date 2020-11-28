@@ -7,7 +7,7 @@ const config = {
     mode: 'development',
     entry: './src/index.tsx',
     output: {
-        filename: 'scripts/[name][hash].bundle.js',
+        filename: 'scripts/[name][chunkhash].bundle.js',
     },
     optimization: {
         minimizer: [new OptimizeJSAssetsPlugin, new OptimizeCSSAssetsPlugin],
@@ -37,7 +37,7 @@ const config = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles/[name][hash].bundle.css',
+            filename: 'styles/[name][chunkhash].bundle.css',
             chunkFilename: '[id][hash].css',
             ignoreOrder: false
         }),

@@ -1,7 +1,8 @@
 import * as React from "react";
 import { render } from 'react-dom';
-import MenuSelect from './components/MenuSelect';
+import App from "./App";
+import './styles/styles.less';
 
 render(
-    <MenuSelect />,
+    <App />,
     document.getElementById('app'));
